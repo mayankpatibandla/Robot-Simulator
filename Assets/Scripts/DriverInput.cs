@@ -62,6 +62,7 @@ public class DriverInput : MonoBehaviour
         tdm.Move(leftSpeed, rightSpeed);
     }
 
+    // Curves the input for smoother driver control
     float curveInput(float input, float t)
     {
         return Mathf.Exp(t * (Mathf.Abs(input) - 100) / 1000) * input;
