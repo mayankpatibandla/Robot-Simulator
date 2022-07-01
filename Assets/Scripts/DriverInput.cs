@@ -65,7 +65,7 @@ public class DriverInput : MonoBehaviour
     // Curves the input for smoother driver control
     float curveInput(float input, float t)
     {
-        return Mathf.Exp(t * (Mathf.Abs(input) - 100) / 1000) * input;
+        return Mathf.Exp(t * (Mathf.Abs(input) - 1) / 10) * input;
     }
 
     private void OnDrawGizmos()
